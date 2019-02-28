@@ -3,12 +3,17 @@ var ship;
 var rotation = 0;
 var asteroids = [];
 var lasers = [];
-var img_lion;
-var img_tiger;
+let img_lion;
+let img_tiger;
+let img_rabbit;
+let img_deer;
+let img_el;
 let unit = 55;
 let count;
 let grass = [];
 let c;
+let temp;
+
 
 function preload(){
 
@@ -17,6 +22,9 @@ function preload(){
 function setup() {
 	img_lion = loadImage('/static/images/lion.png');
 	img_tiger = loadImage('/static/images/tiger.png');
+	img_rabbit = loadImage('/static/images/rabbit.png');
+	img_deer = loadImage('/static/images/deer.png');
+	img_el = loadImage('/static/images/el.png');
   var canvas = createCanvas(930, 600);
  	canvas.parent('sketch-holder');
 	ship = new Ship();
@@ -61,7 +69,19 @@ function draw() {
 		if (ship.hits(asteroids[i])){
 			console.log('oopps');
 		}
-		asteroids[i].render(img_tiger);
+		var temp = i%4;
+		if(temp == 0){
+			asteroids[i].render(img_tiger);
+		}
+		else if(temp == 1){
+			asteroids[i].render(img_deer);
+		}
+		else if(temp == 2){
+			asteroids[i].render(img_rabbit);
+		}
+		else if(temp == 3){
+			asteroids[i].render(img_el);
+		}
 		asteroids[i].update();
 		asteroids[i].edges();
 	}
