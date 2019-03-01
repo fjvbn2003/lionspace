@@ -8,9 +8,9 @@ function Laser(spos, angle){
     }
     this.render = function(){
         push();
-        stroke(0);
-        strokeWeight(4);
-        fill(0,0,0);
+        stroke(255);
+        strokeWeight(1);
+        fill(255);
         console.log('adjfdbh');
         point(this.pos.x, this.pos.y);
         pop();
