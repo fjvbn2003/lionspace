@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Jua&amp;subset=korean" rel="stylesheet">
     <title>Home</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
@@ -21,7 +23,7 @@
 
 
 </head>
-<body>
+<body style="font-family: 'Jua', sans-serif; font-size: larger;">
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{% url 'home' %}">
@@ -53,9 +55,12 @@
     <div class="container">
       <div class="game-rule" style="padding-top: 3em; padding-bottom: 5em;">
         <h1>배고픈 사자처럼</h1>
+
+        <br>
         <h2>게임방법</h2>
         <p>방향키로 사자를 움직여 다른 동물들(토끼, 사슴, 코끼리, 호랑이)을 잡아먹는 게임입니다.</p>
-
+        <p>방향전환 :  좌 우 방향키
+          전진: 위쪽 방향키 방향키</p>
       </div>
     </div>
 
